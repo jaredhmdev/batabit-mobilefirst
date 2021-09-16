@@ -20,6 +20,8 @@ Convención de propiedades
   --grey: #bababa;
   --off-white: #faf8f7;
   --just-white: #fff;
+  --table-cell-key: #b5b0ac;
+  --table-cell-value: #757575;
 }
 
 html {
@@ -28,7 +30,8 @@ html {
 }
 
 html,
-body, section {
+body,
+section {
   padding: 0;
   margin: 0;
 }
@@ -99,12 +102,16 @@ body, section {
   background-image: url(../assets/icons/dropdown-arrow.svg);
 }
 
+.exchange {
+  background-color: var(--off-white);
+  padding-bottom: 65px;
+}
 .exchange-header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-width: 320px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
   height: auto;
   text-align: center;
 }
@@ -112,24 +119,108 @@ body, section {
 .exchange-header__img {
   height: 195px;
   margin-top: 39px;
-
 }
 
 .exchange-header__title {
-    width: 80%;
-    min-width: 228px;
-    max-width: 900px;
-    margin-top: 36px;
-    margin-bottom: 0px;
-    align-self: center;
-    font-size: 2.4rem;
-  }
-  
-  .exchange-header__description {
-    width: 80%;
-    min-width: 228px;
-    max-width: 900px;
-    margin-top: 24px;
-    align-self: center;
-    font-size: 1.4rem;
-  }
+  width: 80%;
+  min-width: 228px;
+  max-width: 900px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  align-self: center;
+  font-size: 2.4rem;
+}
+
+.exchange-header__description {
+  width: 80%;
+  min-width: 228px;
+  max-width: 900px;
+  margin-top: 24px;
+  align-self: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #757575;
+}
+
+.exchange-table__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  max-width: 450px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.exchange-table__title {
+  position: relative;
+  right: 50px;
+  font-size: 1.8rem;
+  color: var(--bitcoin-orange);
+}
+
+.exchange-table__table {
+  background-color: var(--just-white);
+  border-radius: 8px;
+  border-spacing: 0px;
+}
+
+.exchange-table__table-cell {
+  font-family: Inter;
+  font-style: normal;
+  padding: 10px 12px;
+  border: 1px solid var(--off-white);
+}
+
+.exchange-table__table-cell--key {
+  width: 90px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--table-cell-key);
+  text-align: left;
+}
+
+.exchange-table__table-cell--value {
+  width: 70px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--table-cell-value);
+}
+
+.exchange-table__nav-arrow {
+  position: absolute;
+  top: 47%;
+}
+
+.exchange-table__nav-arrow--next {
+  left: 80%;
+}
+
+.exchange-table__nav-arrow--prev {
+  left: 15%;
+}
+
+.icon-arrow-prev {
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  background-image: url(../assets/icons/arrow-left.svg);
+}
+
+.icon-arrow-next {
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  background-image: url(../assets/icons/arrow-right.svg);
+}
+
+.exchange-table__date {
+  padding: 6px 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+  background-color: #ffab45;
+}
