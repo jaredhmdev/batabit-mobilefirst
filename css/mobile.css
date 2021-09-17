@@ -322,7 +322,7 @@ section {
 
 .plans {
 
-  height: 600px;
+  height: 500px;
   padding-top: 35px;
   min-width: 320px;
   background-color: var(--off-white);
@@ -457,4 +457,41 @@ text-align: center;
   width: 22px;
   height: 19px;
   background-image: url(../assets/icons/arrow-right-orange.svg);
+}
+
+.footer{
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+  min-width: 320px;
+  padding-top: 10px;
+  background-color: var(--bitcoin-orange);
+}
+
+.footer__section-left{
+  display: flex;
+  justify-content: start;
+  align-content: center;
+}
+.footer__section-right{
+  display: flex;
+  justify-content: end;
+  align-content: center;
+}
+
+.footer__nav-list{
+  list-style: none;
+  padding: 0;
+}
+
+.footer__nav-link{
+  font-size: 14px;
+line-height: 18px;
+text-align: start;
+text-decoration: none;
+color:var(--just-white);
+}
+
+.footer__img{
+  width: 80px;
 }
