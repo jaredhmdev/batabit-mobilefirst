@@ -108,6 +108,7 @@ section {
 .exchange {
   background-color: var(--off-white);
   padding-bottom: 65px;
+  min-width: 320px;
 }
 .exchange-header {
   position: relative;
@@ -232,6 +233,7 @@ section {
   background-color: var(--black);
   padding-bottom: 65px;
   padding-top: 25px;
+  min-width: 320px;
 }
 
 .benefits_container {
