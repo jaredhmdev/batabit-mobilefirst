@@ -12,14 +12,14 @@ Convención de propiedades
 :root {
   /* Colores */
   --bitcoin-orange: #f7931a;
-  --bitcoin-orange-warm:#c57d31;
+  --bitcoin-orange-warm: #c57d31;
   --soft-orange: #ffe9d5;
   --secondary-blue: #1a9af7;
   --soft-blue: #e7f5ff;
   --warm-black: #282623;
   --black: #201e1c;
   --grey: #bababa;
-  --dark-gray:#808080;
+  --dark-gray: #808080;
   --off-white: #faf8f7;
   --just-white: #fff;
   --table-cell-key: #b5b0ac;
@@ -29,6 +29,7 @@ Convención de propiedades
 html {
   font-size: 62.5%;
   font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -227,13 +228,13 @@ section {
   background-color: #ffab45;
 }
 
-.benefits{
+.benefits {
   background-color: var(--black);
   padding-bottom: 65px;
   padding-top: 25px;
 }
 
-.benefits_container{
+.benefits_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -245,19 +246,19 @@ section {
   margin: 0 auto;
 }
 
-.benefits__img-logo{
+.benefits__img-logo {
   position: relative;
-  width:60px;
-  top:-45px
+  width: 60px;
+  top: -45px;
 }
 
-.benefits__title{
+.benefits__title {
   font-size: 2.4rem;
   text-align: center;
   color: var(--just-white);
 }
 
-.benefits__description{
+.benefits__description {
   margin-bottom: 30px;
   font-size: 1.4rem;
   text-align: center;
@@ -265,7 +266,7 @@ section {
   color: var(--dark-gray);
 }
 
-.benefits-card{
+.benefits-card {
   width: 80%;
   margin-top: 0;
   margin-left: auto;
@@ -277,32 +278,177 @@ section {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
 }
 
-.benetifs-card__figure{
+.benetifs-card__figure {
   margin-left: 0;
 }
 
-.benetifs-card__image{
+.benetifs-card__image {
   text-align: start;
 }
 
-.benetifs-card__title{
+.benetifs-card__title {
   font-size: 1.8rem;
   color: var(--just-white);
 }
 
-.benetifs-card__copy{
+.benetifs-card__copy {
   font-size: 1.4rem;
   font-weight: 500;
   color: var(--dark-gray);
 }
 
-.promo, .promo__container{
+.promo,
+.promo__container {
   max-width: 100%;
-  height: auto;
+  min-width: 320px;
+  height: 50vh;
+  background-image: url("../assets/imgs/bitcoinwoman.jpg");
   background-color: var(--bitcoin-orange-warm);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.promo__img{
-  max-width: 100%;
+.promo__title {
+  position: relative;
+  margin: 0 auto;
+  top: 90px;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--just-white);
+}
+
+.plans {
+
+  height: 600px;
+  padding-top: 35px;
+  min-width: 320px;
+  background-color: var(--off-white);
+}
+
+.plans__container {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  overscroll-behavior-x:contain;
+  scroll-snap-type: proximity;
+  width: 100%;
+  height: 600px;
+  min-width: 320px;
   height: auto;
+  text-align: center;
+}
+
+.plans__title {
+  font-size: 2.4rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-align: center;
+  color: var(--warm-black);
+}
+
+.plans__description {
+  margin-bottom: 50px;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--table-cell-value);
+}
+
+.plans-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+  width: 260px;
+  min-width: 150px;
+  max-width: 150px;
+  height: 260px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  padding: 5px 30px 15px 30px;
+  border-radius: 15px;
+  background-color: var(--just-white);
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.plans-card__label {
+  position: relative;
+  top: -20px;
+  width: 90px;
+  padding: 6px 8px;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.plans-card__body {
+  height: 145px;
+}
+.plans-card__label--suggestion {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Inter;
+  color: var(--off-white);
+  background-color: var(--bitcoin-orange);
+}
+
+.plans-card__label--lite {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Inter;
+  color: var(--off-white);
+  background-color: var(--secondary-blue);
+}
+
+.plans-card__label--premier {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Inter;
+  color: var(--off-white);
+  background-color: var(--warm-black);
+}
+
+.plans-card__price {
+  font-size: 4.8rem;
+  font-weight: bold;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.plans-card__sup {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.plans-card__copy{
+  color: var(--table-cell-value);
+  font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+}
+.plans-card__link {
+  width: 80%;
+  margin: 0 auto;
+  padding: 8px 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--black);
+  text-decoration: none;
+  background: var(--off-white);
+  border: 2px solid var(--bitcoin-orange);
+  border-radius: 4px;
+}
+
+.icon-orange-arrow {
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background-image: url(../assets/icons/arrow-right-orange.svg);
 }
