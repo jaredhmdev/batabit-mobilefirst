@@ -252,6 +252,7 @@ section {
   position: relative;
   width: 60px;
   top: -45px;
+  left:calc(50% - 20px);
 }
 
 .benefits__title {
